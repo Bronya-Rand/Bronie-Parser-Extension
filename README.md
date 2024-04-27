@@ -1,6 +1,6 @@
 # Bronie Parser Extension
 A SillyTavern extension that adds third-party data banks into SillyTavern (miHoYo/HoYoverse HoYoLAB, etc.)
-> Bronie: Bronie!
+> Bronie: Bronie! :)
 
 ## Requirements
 - SillyTavern 1.12.0
@@ -14,7 +14,7 @@ A SillyTavern extension that adds third-party data banks into SillyTavern (miHoY
 5. Go to *Data Bank* under the __magic wand__ icon. You should see your third-party parser appear!
 
 ## Creating a Parser for the Bronie Extension
-> I recommend referring to the supplied miHoYo/HoYoVerse extension for making a parser.
+> I recommend referring to the supplied miHoYo/HoYoVerse extension for making a parser. For this example, we will use a theoretical parser named `fuXuan`.
 1. Create a folder for your extension followed by a blank JS file.
 2. Program the logic of the Scraper class and the things you want.
 3. Create the HTML UI in a blank *HTML* file.
@@ -30,7 +30,23 @@ const PARSER_LIST = [
 ]
 ```
 5. Restart SillyTavern.
-5. Go to *Data Bank* under the __magic wand__ icon. You should see your new parser  appear!
+5. Go to *Data Bank* under the __magic wand__ icon. You should see your new parser appear!
+
+## Parser Icon Setup
+If your parser doesn't have an icon defined in FontAwesome, first grab the icon and save it as a white SVG file of 20x20.
+In your parser file, do the following under `constructor()`
+```js
+export class yourScraper {
+    constructor() {
+        ...
+        this.iconClass = 'scripts/extensions/Bronie-Parser-Extension/parsers/your-parser/parserIcon.svg';
+        this.iconAvailable = false; // True: Icon exists in FontAwesome | False: Icon doesn't exist
+    }
+
+    ...
+}
+```
+> If your parser has a icon in FontAwesome, make sure `this.iconAvailable` is set to *True*.
 
 ## Why Bronie?
 Because Bronie.
