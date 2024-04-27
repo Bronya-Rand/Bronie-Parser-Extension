@@ -12,8 +12,8 @@ export class miHoYoScraper {
         this.id = 'mihoyo';
         this.name = 'miHoYo';
         this.description = 'Scrapes a page from the miHoYo/HoYoverse HoYoLAB wiki.';
-        this.iconClass = 'fa-solid fa-fire';
-        //this.iconAvailable = false; // There is no miHoYo icon in Font Awesome
+        this.iconClass = 'scripts/extensions/Bronie-Parser-Extension/parsers/mihoyo/mihoyo.svg';
+        this.iconAvailable = false; // There is no miHoYo icon in Font Awesome.
     }
 
     /**
