@@ -54,6 +54,9 @@ export class yourScraper {
 
 ## Troubleshooting
 1. My custom scraper is not appearing in the Data Bank!
-   > Make sure the plugin is installed in SillyTavern and that `enableServerPlugins` is set to *True*. If it still doesn't appear, then verify that you imported it and added it into Bronie's `index.js` file as seen in [Creating a Scraper for the Bronie Extension](#creating-a-scraper-for-the-bronie-extension).
+   1. Make sure the plugin is installed in SillyTavern and that `enableServerPlugins` is set to *True*. 
+   2. Verify that you imported your scraper and added it into Bronie's `index.js` file as seen in [Creating a Scraper for the Bronie Extension](#creating-a-scraper-for-the-bronie-extension).
+   3. The scraper you are installing has yet been implemented into the Bronie extension! (BronyaShock) 
+      > No worries! You can always make one and send a PR to get it implemented. (BronyaNod)
 2. My custom scraper icon is not appearing!
    > Make sure the image has been added and you followed [Scraper Icon Setup](#scraper-icon-setup). Make sure it points directly to the scripts folder and all the way to your scraper.
