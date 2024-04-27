@@ -1,7 +1,7 @@
 import { getRequestHeaders } from '../../../../../script.js';
 import { renderExtensionTemplateAsync } from '../../../../extensions.js';
 import { POPUP_RESULT, POPUP_TYPE, callGenericPopup } from '../../../../popup.js';
-import { Scraper } from '../../../../scrapers.js';
+{import('../../../../scrapers.js').Scraper}
 
 /**
  * Scrapes data from the miHoYo/HoYoverse HoYoLAB wiki.
