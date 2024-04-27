@@ -1,12 +1,12 @@
 {
-    "display_name": "Template Extension",
+    "display_name": "Bronie Parser Extension",
     "loading_order": 1,
     "requires": [],
     "optional": [],
-    "js": "dist/index.js",
+    "js": "index.js",
     "css": "",
-    "author": "Cohee1207",
+    "author": "Bronya Rand",
     "version": "1.0.0",
-    "homePage": "https://github.com/Cohee1207/Extension-ReactTemplate",
+    "homePage": "https://github.com/Bronya-Rand/Bronie-Parser-Extension",
     "auto_update": true
 }

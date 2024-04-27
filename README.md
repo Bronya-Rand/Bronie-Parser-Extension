@@ -1,15 +1,36 @@
-# Extension-ReactTemplate
-Template repository for SillyTavern extensions using React and Webpack.
+# Bronie Parser Extension
+A SillyTavern extension that adds third-party data banks into SillyTavern (miHoYo/HoYoverse HoYoLAB, etc.)
+> Bronie: Bronie!
 
-## How to use
+## Requirements
+- SillyTavern 1.12.0
+- Node.js 20+
 
-1. Click "Use this template" on the GitHub page.
-2. Create a new repository and clone it to your local machine.
-3. Open the repository in your code editor and run `npm install`.
-4. Edit the `manifest.json` file.
-5. Write the source code in `src` directory.
-6. When you're ready to test - run `npm run build`.
-7. Minimized bundle will appear in `dist`, ready to be plugged into SillyTavern.
+## Installation
+1. Click *Extensions* then **Install Extension**
+2. Paste in the following __link__ into the text field and click Save: `https://github.com/Bronya-Rand/Bronie-Parser-Extension`.
+3. Install any third-party data bank plugin into SillyTavern's `plugins` folder.
+4. Restart SillyTavern.
+5. Go to *Data Bank* under the __magic wand__ icon. You should see your third-party parser appear!
 
-> [!TIP]
-> If you want to test your extension live, clone the repo into the `/public/scripts/extensions/third-party` of your SillyTavern installation.
+## Creating a Parser for the Bronie Extension
+> I recommend referring to the supplied miHoYo/HoYoVerse extension for making a parser.
+1. Create a folder for your extension followed by a blank JS file.
+2. Program the logic of the Scraper class and the things you want.
+3. Create the HTML UI in a blank *HTML* file.
+4. In `index.js`, import your parser and add it to *PARSER_LIST*
+```js
+import { miHoYoScraper } from './parsers/mihoyo/mihoyo.js';
+import { fuXuan } from './parsers/fuXuan/fuXuan.js';
+
+const MODULE_NAME = 'Bronie Parser Extension';
+const PARSER_LIST = [
+    new miHoYoScraper(),
+    new fuXuan(),
+]
+```
+5. Restart SillyTavern.
+5. Go to *Data Bank* under the __magic wand__ icon. You should see your new parser  appear!
+
+## Why Bronie?
+Because Bronie.
