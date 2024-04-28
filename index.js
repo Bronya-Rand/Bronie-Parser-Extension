@@ -1,5 +1,5 @@
 /* global SillyTavern */
-import { ScraperManager } from '../../scrapers.js';
+import { ScraperManager } from '../../../scrapers.js';
 import { miHoYoScraper } from './parsers/mihoyo/mihoyo.js';
 
 const MODULE_NAME = 'Bronie Parser Extension';

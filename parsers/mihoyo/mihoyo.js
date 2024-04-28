@@ -1,7 +1,7 @@
-import { getRequestHeaders } from '../../../../../script.js';
-import { renderExtensionTemplateAsync } from '../../../../extensions.js';
-import { POPUP_RESULT, POPUP_TYPE, callGenericPopup } from '../../../../popup.js';
-{import('../../../../scrapers.js').Scraper}
+import { getRequestHeaders } from '../../../../../../script.js';
+import { renderExtensionTemplateAsync } from '../../../../../extensions.js';
+import { POPUP_RESULT, POPUP_TYPE, callGenericPopup } from '../../../../../popup.js';
+{import('../../../../../scrapers.js').Scraper}
 
 /**
  * Scrapes data from the miHoYo/HoYoverse HoYoLAB wiki.
@@ -12,7 +12,7 @@ export class miHoYoScraper {
         this.id = 'mihoyo';
         this.name = 'miHoYo';
         this.description = 'Scrapes a page from the miHoYo/HoYoverse HoYoLAB wiki.';
-        this.iconClass = 'scripts/extensions/Bronie-Parser-Extension/parsers/mihoyo/mihoyo.svg';
+        this.iconClass = 'scripts/extensions/third-party/Bronie-Parser-Extension/parsers/mihoyo/mihoyo.svg';
         this.iconAvailable = false; // There is no miHoYo icon in Font Awesome.
     }
 
@@ -59,7 +59,7 @@ export class miHoYoScraper {
         let miHoYoWiki = '';
         let miHoYoWikiID = '';
 
-        const template = $(await renderExtensionTemplateAsync('Bronie-Parser-Extension', 'parsers/mihoyo/mihoyo', {}));
+        const template = $(await renderExtensionTemplateAsync('third-party/Bronie-Parser-Extension', 'parsers/mihoyo/mihoyo', {}));
 
         template.find('select[name="mihoyoScrapeWikiDropdown"]').on('change', function () {
             miHoYoWiki = String($(this).val());
