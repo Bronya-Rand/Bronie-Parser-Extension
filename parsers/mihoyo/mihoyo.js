@@ -84,9 +84,8 @@ export class miHoYoScraper {
             return;
         }
 
-        if (miHoYoWiki === 'genshin') {
-            toastr.error('The Genshin Impact parser has not been implemented *yet*');
-            return;
+        if (['hsr', 'genshin'].indexOf(miHoYoWiki) === -1) {
+            throw new Error('Unknown wiki name identifier');
         }
 
         let toast;
@@ -96,22 +95,11 @@ export class miHoYoScraper {
             toast = toastr.info(`Scraping the Genshin Impact wiki for Wiki Entry ID: ${miHoYoWikiID}`);
         }
 
-        let result;
-        if (miHoYoWiki === 'hsr') {
-            result = await fetch('/api/plugins/hoyoverse/silver-wolf', {
-                method: 'POST',
-                headers: getRequestHeaders(),
-                body: JSON.stringify({ miHoYoWiki, miHoYoWikiID }),
-            });
-        } else if (miHoYoWiki === 'genshin') {
-            result = await fetch('/api/plugins/hoyoverse/furina', {
-                method: 'POST',
-                headers: getRequestHeaders(),
-                body: JSON.stringify({ miHoYoWiki, miHoYoWikiID }),
-            });
-        } else {
-            throw new Error('Unknown wiki name identifier');
-        }
+        const result = await fetch('/api/plugins/hoyoverse/silver-wolf', {
+            method: 'POST',
+            headers: getRequestHeaders(),
+            body: JSON.stringify({ miHoYoWiki, miHoYoWikiID }),
+        });
 
         if (!result.ok) {
             const error = await result.text();

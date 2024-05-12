@@ -1,12 +1,12 @@
 {
-    "display_name": "Bronie Parser Extension",
-    "loading_order": 1,
-    "requires": [],
-    "optional": [],
-    "js": "index.js",
-    "css": "",
-    "author": "Bronya Rand",
-    "version": "1.0.1",
-    "homePage": "https://github.com/Bronya-Rand/Bronie-Parser-Extension",
-    "auto_update": true
+  "display_name": "Bronie Parser Extension",
+  "loading_order": 1,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "",
+  "author": "Bronya Rand",
+  "version": "1.0.2",
+  "homePage": "https://github.com/Bronya-Rand/Bronie-Parser-Extension",
+  "auto_update": true
 }
