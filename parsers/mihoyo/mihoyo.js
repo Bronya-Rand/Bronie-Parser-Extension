@@ -11,7 +11,7 @@ export class miHoYoScraper {
     constructor() {
         this.id = 'mihoyo';
         this.name = 'miHoYo';
-        this.description = 'Scrapes a page from the miHoYo/HoYoverse HoYoLAB wiki.';
+        this.description = 'Download a page from the miHoYo/HoYoverse HoYoLAB wiki.';
         this.iconClass = 'scripts/extensions/third-party/Bronie-Parser-Extension/parsers/mihoyo/mihoyo.svg';
         this.iconAvailable = false; // There is no miHoYo icon in Font Awesome.
     }
