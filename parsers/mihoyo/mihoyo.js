@@ -46,7 +46,6 @@ export class miHoYoScraper {
                     return '';
                 }
             },
-            helpString: 'Download a page from the miHoYo/HoYoverse HoYoLAB wiki by wiki page and ID.',
             returns: ARGUMENT_TYPE.STRING,
             namedArgumentList: [
                 new SlashCommandNamedArgument('wiki', 'The specific HoYoLab wiki to scrape from', ["hsr", "genshin"], true, false),
